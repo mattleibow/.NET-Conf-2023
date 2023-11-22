@@ -1,0 +1,62 @@
+﻿@page "/validation"
+
+@{ /* TODO: 04 [Streaming] Enable streaming */ }
+@* @attribute [StreamRendering] *@
+
+<PageTitle>Validation</PageTitle>
+
+<h1>Hello, Validation!</h1>
+
+@if (!string.IsNullOrEmpty(status))
+{
+    <div class="alert alert-primary" role="alert">
+        @status
+    </div>
+}
+
+@{ /* TODO: 05 [Enhanced Navigation] Add 'Enhance' to make the contents stay */ }
+<EditForm FormName="validation-form" method="post" Model="@Item" OnValidSubmit="UpdateAsync">
+    <div class="mb-3">
+        <label for="nameInput" class="form-label">Name</label>
+        <InputText @bind-Value="@Item.Name" type="text" class="form-control" id="nameInput" placeholder="Joe Smith" />
+    </div>
+    <div class="mb-3">
+        <label for="emailInput" class="form-label">Email address</label>
+        <InputText @bind-Value="@Item.Email" type="email" class="form-control" id="emailInput" placeholder="name@example.com" />
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+
+    <DataAnnotationsValidator />
+    <div class="mt-3">
+        <ValidationSummary />
+    </div>
+
+</EditForm>
+
+@code {
+    string? status;
+
+    [SupplyParameterFromForm] public ValidationModel Item { get; set; } = new();
+
+    async Task UpdateAsync()
+    {
+        status = "Submitting...";
+
+        // Simulate a long running save
+        await Task.Delay(1000);
+
+        status = "Submitted";
+    }
+
+    public class ValidationModel
+    {
+        [Required]
+        public string? Name { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string? Email { get; set; }
+    }
+}
