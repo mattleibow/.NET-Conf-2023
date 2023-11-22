@@ -1,10 +1,13 @@
 ﻿@page "/counter"
 
+@inject NavigationManager Nav
+
 <PageTitle>Counter</PageTitle>
 
 <h1>Hello, Counter!</h1>
 
-@{ /* TODO: 06 [Render Mode] Add '@rendermode="InteractiveServer"' */ }
-@{ /* TODO: 09 [Render Mode] Add '@rendermode="InteractiveWebAssembly"' */ }
-<CounterThing @rendermode="InteractiveWebAssembly" />
+@{ /* TODO: [4] 06 [Render Mode] Add '@rendermode="InteractiveServer"' */ }
+@{ /* TODO: [5] 09 [Render Mode] Add '@rendermode="InteractiveWebAssembly"' */ }
+@{ /* TODO: [6] 13 [Render Mode] Add '@rendermode="InteractiveAuto"' */ }
 
+<CounterThing />

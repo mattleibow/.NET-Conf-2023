@@ -1,0 +1,12 @@
+﻿@page "/dynamic"
+
+@inject StarService Stars
+
+<PageTitle>Dynamic Static</PageTitle>
+
+<h1>Hello, Dynamic Static!</h1>
+
+<p role="status">Current stars: @Stars.NumberOfStars</p>
+
+@{ /* TODO: [7] 16 [Enhanced Navigation] Add `@rendermode="InteractiveServer"` for updating static components */ }
+<StarThing />

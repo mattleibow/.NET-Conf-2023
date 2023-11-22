@@ -1,0 +1,14 @@
+﻿@inject StarService Stars
+
+@{ /* TODO: [7] 14 [Enhanced Navigation] Add `@inject NavigationManager Nav` for updating static components */ }
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private void IncrementCount()
+    {
+        Stars.AddStar();
+
+        // TODO: [7] 15 [Enhanced Navigation] Add `Nav.Refresh();` for updating static components
+    }
+}

@@ -1,7 +1,7 @@
 ﻿@page "/weather"
 @inject WeatherService WeatherService
 
-@{ /* TODO: 01 [Streaming] Enable streaming */ }
+@{ /* TODO: [1] 01 [Streaming] Enable streaming */ }
 @* @attribute [StreamRendering] *@
 
 <PageTitle>Weather</PageTitle>
@@ -48,7 +48,7 @@ else
         {
             forecasts.Add(forecast);
 
-            // TODO: 02 [Streaming] Enable partial content loading
+            // TODO: [1] 02 [Streaming] Enable partial content loading
             // StateHasChanged();
         }
     }
