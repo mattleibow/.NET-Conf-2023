@@ -2,7 +2,7 @@
 
 //using Microsoft.AspNetCore.Components;
 
-//namespace BlazorAllTheThings;
+//namespace BlazorAllTheThings.Services;
 
 //public interface IRenderModeAdjuster
 //{
