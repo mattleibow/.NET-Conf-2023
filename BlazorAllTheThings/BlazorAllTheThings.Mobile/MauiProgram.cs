@@ -25,4 +25,5 @@ public static class MauiProgram
 	}
 }
 
-// TODO: [8] ----- Shared Mobile
+// TODO: [8] ----- Shared Components
+// TODO: [9] ----- Shared Mobile

@@ -1,4 +1,4 @@
-﻿// TODO: [8] 3 [Shared Mobile] Add RenderModeAdjuster concrete implementation for mobile
+﻿// TODO: [9] 2 [Shared Mobile] Add RenderModeAdjuster concrete implementation for mobile
 
 //using Microsoft.AspNetCore.Components;
 
