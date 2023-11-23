@@ -24,3 +24,5 @@ public static class MauiProgram
 		return builder.Build();
 	}
 }
+
+// TODO: [8] ----- Shared Mobile
