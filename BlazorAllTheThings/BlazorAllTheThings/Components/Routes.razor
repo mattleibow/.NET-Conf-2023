@@ -1,0 +1,7 @@
+﻿@{ /* // TODO: [ 9] 2 [Shared Library] Add `AdditionalAssemblies="new [] { typeof(Components.Layout.MainLayout).Assembly }"` */ }
+<Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="new [] { typeof(Components.Layout.MainLayout).Assembly }">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(Components.Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+</Router>
