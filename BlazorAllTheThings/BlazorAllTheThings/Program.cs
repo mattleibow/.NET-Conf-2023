@@ -3,7 +3,7 @@ using BlazorAllTheThings.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// TODO: [ 4] 4 [Render Mode] Add `.AddInteractiveServerComponents()` to enable interactive server-side components
+// TODO: [ 4] 3 [Render Mode] Add `.AddInteractiveServerComponents()` to enable interactive server-side components
 // TODO: [ 5] 2 [Render Mode] Add `.AddInteractiveWebAssemblyComponents()` to enable interactive wasm components
 
 // Add services to the container.
@@ -11,6 +11,8 @@ builder.Services.AddRazorComponents();
 
 builder.Services.AddSingleton<WeatherService>();
 builder.Services.AddSingleton<StarService>();
+// TODO: [10] 5 [Shared Mobile] Add RenderModeAdjuster concrete implementation for web
+builder.Services.AddSingleton<IRenderModeAdjuster, RenderModeAdjuster>();
 
 var app = builder.Build();
 
@@ -31,8 +33,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-// TODO: [ 4] 5 [Render Mode] Add `.AddInteractiveServerRenderMode()` to enable interactive server-side components
+// TODO: [ 4] 4 [Render Mode] Add `.AddInteractiveServerRenderMode()` to enable interactive server-side components
 // TODO: [ 5] 3 [Render Mode] Add `.AddInteractiveWebAssemblyRenderMode()` to enable interactive wasm components
+// TODO: [ 9] 2 [Shared Library] Add `.AddAdditionalAssemblies(typeof(BlazorAllTheThings.Components.Layout.MainLayout).Assembly)`
 
 app.MapRazorComponents<App>();
 
@@ -45,3 +48,6 @@ app.Run();
 // TODO: [ 5] ----- Interactive WASM
 // TODO: [ 6] ----- Interactive Auto
 // TODO: [ 7] ----- Dynamic Static
+// TODO: [ 8] ----- Shared Components
+// TODO: [ 9] ----- Shared Library
+// TODO: [10] ----- Shared Mobile

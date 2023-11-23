@@ -1,8 +1,8 @@
 ﻿namespace BlazorAllTheThings.Mobile;
 
-public partial class MainPage : ContentPage
+public partial class AppShell : Shell
 {
-    public MainPage()
+    public AppShell()
     {
         InitializeComponent();
     }
