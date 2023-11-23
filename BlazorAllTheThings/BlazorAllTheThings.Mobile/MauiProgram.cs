@@ -16,10 +16,11 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
             });
 
-        // TODO: [10] 5 [Shared Mobile] Register services
+        // TODO: [10]  3 [Shared Mobile] Register services
         //builder.Services.AddSingleton<WeatherService>();
         //builder.Services.AddSingleton<StarService>();
-        // TODO: [10] 5 [Shared Mobile] Add RenderModeAdjuster concrete implementation for web
+
+        // TODO: [10]  6 [Shared Mobile] Register RenderModeAdjuster concrete implementation for mobile
         //builder.Services.AddSingleton<IRenderModeAdjuster, RenderModeAdjuster>();
 
         builder.Services.AddMauiBlazorWebView();
@@ -31,4 +32,11 @@ public static class MauiProgram
 
         return builder.Build();
     }
+
+    #region
+    static BlazorAllTheThings.Components.Extras.Placeholder? ExtrasKeeper;
+    static BlazorAllTheThings.Services.Placeholder? ServicesKeeper;
+    #endregion
 }
+
+// TODO: [10]  2 [Shared Mobile] Add `_content/BlazorAllTheThings.Shared/` to all shared things in index.html
