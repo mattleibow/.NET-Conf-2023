@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAllTheThings", "Blazo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAllTheThings.Client", "BlazorAllTheThings.Client\BlazorAllTheThings.Client.csproj", "{FB71E55B-520E-4D0D-8908-48D0417162ED}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CounterCompany", "CounterCompany\CounterCompany.csproj", "{56B25AF9-461A-4901-8EC0-9322F6F75C43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB71E55B-520E-4D0D-8908-48D0417162ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB71E55B-520E-4D0D-8908-48D0417162ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB71E55B-520E-4D0D-8908-48D0417162ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B25AF9-461A-4901-8EC0-9322F6F75C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B25AF9-461A-4901-8EC0-9322F6F75C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B25AF9-461A-4901-8EC0-9322F6F75C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B25AF9-461A-4901-8EC0-9322F6F75C43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
