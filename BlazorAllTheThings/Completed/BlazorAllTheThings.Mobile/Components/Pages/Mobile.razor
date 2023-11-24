@@ -1,0 +1,36 @@
+﻿@page "/mobile"
+
+<PageTitle>Mobile</PageTitle>
+
+<h1>Hello, Mobile!</h1>
+
+<p role="status" style="font-size: smaller">File path: @path</p>
+<p role="status">File contents: @contents</p>
+
+<button class="btn btn-primary" @onclick="BeAmazing">Click me</button>
+
+@code {
+    private string path = "";
+    private string contents = "";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        path = Path.Combine(FileSystem.AppDataDirectory, "test.txt");
+
+        if (File.Exists(path))
+            contents = File.ReadAllText(path);
+    }
+
+    private async Task BeAmazing()
+    {
+        var app = Application.Current!;
+        var page = app.Windows[0].Page!;
+
+        contents = await page.DisplayPromptAsync(
+            "File Contents", "Enter some contents for the file:");
+
+        File.WriteAllText(path, contents);
+    }
+}

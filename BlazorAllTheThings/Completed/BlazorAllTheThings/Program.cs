@@ -12,6 +12,7 @@ builder.Services.AddSingleton<WeatherService>();
 builder.Services.AddSingleton<StarService>();
 
 builder.Services.AddSingleton<IRenderModeAdjuster, RenderModeAdjuster>();
+builder.Services.AddSingleton<IAdditionalMenuItems, NoAdditionalMenuItems>();
 
 var app = builder.Build();
 

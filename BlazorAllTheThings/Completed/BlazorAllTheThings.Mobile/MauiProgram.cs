@@ -20,6 +20,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<StarService>();
 
         builder.Services.AddSingleton<IRenderModeAdjuster, RenderModeAdjuster>();
+        builder.Services.AddSingleton<IAdditionalMenuItems, MobileAdditionalMenuItems>();
 
         builder.Services.AddMauiBlazorWebView();
 

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CounterCompany", "CounterCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAllTheThings.Mobile", "BlazorAllTheThings.Mobile\BlazorAllTheThings.Mobile.csproj", "{E7101E00-ED30-4E05-87ED-D1A6DCA59CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAllTheThings.Shared", "BlazorAllTheThings.Shared\BlazorAllTheThings.Shared.csproj", "{127C0496-44A8-441C-918D-535F260C2886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAllTheThings.Shared", "BlazorAllTheThings.Shared\BlazorAllTheThings.Shared.csproj", "{127C0496-44A8-441C-918D-535F260C2886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
