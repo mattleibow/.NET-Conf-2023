@@ -1,0 +1,9 @@
+﻿@page "/counter"
+
+@inject IRenderModeAdjuster Modes
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Hello, Counter!</h1>
+
+<CounterThing @rendermode="Modes.Adjust(InteractiveAuto)" />

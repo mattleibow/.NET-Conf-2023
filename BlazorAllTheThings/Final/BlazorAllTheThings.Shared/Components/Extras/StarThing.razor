@@ -1,0 +1,13 @@
+﻿@inject StarService Stars
+@inject NavigationManager Nav
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private void IncrementCount()
+    {
+        Stars.AddStar();
+
+        Nav.Refresh();
+    }
+}

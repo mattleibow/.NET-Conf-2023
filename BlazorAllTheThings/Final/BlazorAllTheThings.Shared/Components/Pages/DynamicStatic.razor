@@ -1,0 +1,12 @@
+﻿@page "/dynamic"
+
+@inject StarService Stars
+@inject IRenderModeAdjuster Modes
+
+<PageTitle>Dynamic Static</PageTitle>
+
+<h1>Hello, Dynamic Static!</h1>
+
+<p role="status">Current stars: @Stars.NumberOfStars</p>
+
+<StarThing @rendermode="Modes.Adjust(InteractiveServer)" />

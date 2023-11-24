@@ -1,0 +1,6 @@
+﻿<Router AppAssembly="@typeof(MauiProgram).Assembly" AdditionalAssemblies="new [] { typeof(BlazorAllTheThings.Components.Layout.MainLayout).Assembly }">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(BlazorAllTheThings.Components.Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+</Router>
