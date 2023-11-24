@@ -5,6 +5,14 @@
              x:Class="BlazorAllTheThings.Mobile.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
+    <!--
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Help">
+            <MenuFlyoutItem Text="About" Clicked="OnAboutClicked" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+    -->
+    
     <Grid>
 
         <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
