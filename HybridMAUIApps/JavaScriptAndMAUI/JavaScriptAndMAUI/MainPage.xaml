@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:hwv="clr-namespace:HybridWebView;assembly=HybridWebView"
+             x:Class="JavaScriptAndMAUI.MainPage">
+
+    <Grid ColumnDefinitions="*,*">
+
+        <VerticalStackLayout Padding="12" Spacing="12">
+            <Label
+                Text="Hello .NET MAUI world!"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <HorizontalStackLayout Spacing="6">
+                <Label
+                    Text="Current page:"
+                    FontAttributes="Bold" />
+                <Label
+                    Text="{Binding CurrentPageName}" />
+            </HorizontalStackLayout>
+            <Label
+                Text="Message:"
+                FontAttributes="Bold"
+                Margin="0,0,0,-6"/>
+            <Entry
+                Text="{Binding MessageText}" />
+            <Button
+                Text="Send raw message to JavaScript"
+                Clicked="OnSendRawMessage"
+                IsEnabled="{Binding SupportsMessages}" />
+            <Button
+                Text="Send invoke message to JavaScript"
+                Clicked="OnSendInvokeMessage"
+                IsEnabled="{Binding SupportsMessages}" />
+        </VerticalStackLayout>
+
+        <hwv:HybridWebView
+            Grid.Column="1"
+            x:Name="myHybridWebView"
+            HybridAssetRoot="wwwroot" MainFile="index.html"
+            RawMessageReceived="OnHybridWebViewRawMessageReceived" />
+        
+    </Grid>
+
+</ContentPage>

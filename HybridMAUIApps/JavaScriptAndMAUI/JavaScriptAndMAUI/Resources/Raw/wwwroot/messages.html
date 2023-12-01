@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hello messaging world!</title>
+    <script src="_hwv/HybridWebView.js"></script>
+    <script src="js/app.js"></script>
+    <link href="styles/app.css" rel="stylesheet" />
+    <script>
+        function ProcessTextInJavaScript(text) {
+            if (!text) text = "";
+            var upper = text.toUpperCase();
+            return text == upper;
+        }
+        function SendRawMessage() {
+            var value = document.getElementById('messageText').value;
+            var event = {
+                "event": "rawMessage",
+                "value": value
+            };
+            HybridWebView.SendRawMessageToDotNet(JSON.stringify(event));
+        }
+        function SendInvokeMessage() {
+            var value = document.getElementById('messageText').value;
+            HybridWebView.SendInvokeMessageToDotNet("ProcessTextInDotNet", [ value, 5 ]);
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello messaging world!</h1>
+    <p>
+        Methods can be invoked in both directions:
+    </p>
+    <ul>
+        <li>JavaScript can invoke .NET methods</li>
+        <li>.NET can invoke JavaScript methods</li>
+    </ul>
+    <p>
+        There are 2 types of messaging:
+    </p>
+    <ul>
+        <li><b>Raw Messaging</b> - Messages are sent between .NET and JavaScript as raw messages and are not processed by the <code>HybridWebView</code> control.</li>
+        <li><b>Invoke .NET Messaging</b> - Messages are set to an "invoke target" object on the <code>HybridWebView</code> control.</li>
+    </ul>
+    <p>
+        Let's have a look:
+    </p>
+    <p>
+        <b>Message:</b><br />
+        <input type="text" id="messageText" value="Hello from JavaScript" />
+    </p>
+    <p>
+        <button type="button" onclick="SendRawMessage()">Send raw message to .NET</button>
+        <button type="button" onclick="SendInvokeMessage()">Send invoke message to .NET</button>
+    </p>
+    <p>
+        <a href="index.html">Go back...</a>
+    </p>
+    <script>
+        UpdateDotNetCurrentPage("messages");
+    </script>
+</body>
+</html>

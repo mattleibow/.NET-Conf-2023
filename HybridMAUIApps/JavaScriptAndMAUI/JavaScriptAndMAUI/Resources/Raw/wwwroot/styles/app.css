@@ -1,0 +1,9 @@
+﻿body {
+    background-color: azure;
+    font-family: Arial;
+    padding: 1em;
+}
+
+p {
+    line-height: 120%;
+}
