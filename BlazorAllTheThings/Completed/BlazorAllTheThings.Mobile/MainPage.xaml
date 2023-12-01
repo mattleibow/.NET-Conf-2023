@@ -5,15 +5,13 @@
              x:Class="BlazorAllTheThings.Mobile.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <!--
-    <ContentPage.MenuBarItems>
+    <!--<ContentPage.MenuBarItems>
         <MenuBarItem Text="Help">
             <MenuFlyoutItem Text="About" Clicked="OnAboutClicked" />
         </MenuBarItem>
-    </ContentPage.MenuBarItems>
-    -->
+    </ContentPage.MenuBarItems>-->
     
-    <Grid>
+    <Grid RowDefinitions="*,Auto">
 
         <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>
@@ -21,6 +19,15 @@
             </BlazorWebView.RootComponents>
         </BlazorWebView>
 
+        <!--<HorizontalStackLayout Grid.Row="1" Background="Azure" Padding="6,3">
+            <Label Text="Hello .NET Conf 2023!"
+                   TextColor="Black"
+                   Margin="0,0,12,0"
+                   VerticalOptions="Center" />
+            <Button Text="Click me!"
+                    Background="LightBlue" />
+        </HorizontalStackLayout>-->
+    
     </Grid>
 
 </ContentPage>
