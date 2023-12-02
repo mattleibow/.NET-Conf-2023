@@ -56,6 +56,7 @@ namespace JavaScriptAndMAUI
         private async void OnSendInvokeMessage(object sender, EventArgs e)
         {
             var result = await myHybridWebView.InvokeJsMethodAsync<bool>("ProcessTextInJavaScript", MessageText);
+
             await DisplayAlert("HybridWebView", $"We sent '{MessageText}' to JavaScript and it returned '{result}'.", "OK");
         }
 
